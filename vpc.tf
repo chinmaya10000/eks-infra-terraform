@@ -30,12 +30,12 @@ module "vpc" {
   map_public_ip_on_launch = true
 
   private_subnet_tags = {
-    "kubernetes.io/role/internal-elb" = "1"
+    "kubernetes.io/role/internal-elb"                              = "1"
     "kubernetes.io/cluster/${local.env}-${local.eks_cluster_name}" = "shared"
   }
 
   public_subnet_tags = {
-    "kubernetes.io/role/elb" = "1"
+    "kubernetes.io/role/elb"                                       = "1"
     "kubernetes.io/cluster/${local.env}-${local.eks_cluster_name}" = "shared"
   }
 
