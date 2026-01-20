@@ -7,4 +7,5 @@ locals {
   public_subnet_cidr_blocks  = ["10.0.101.0/24", "10.0.102.0/24", "10.0.103.0/24"]
 
   eks_cluster_name           = "main"
-}
+  eks_version                = "1.34"
+} 
